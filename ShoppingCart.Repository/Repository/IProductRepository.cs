@@ -7,7 +7,7 @@ namespace ShoppingCart.Repository.Repository
     {
         IEnumerable<Product> GetAll();
         Product Get(string name, int quantity);
-        Product Add(Product item);
+        void Add(Product item);
         void Remove(int id);
         bool Update(Product item);
         IEnumerable<Product> GetAllByPaging(int skip, int pageSize);

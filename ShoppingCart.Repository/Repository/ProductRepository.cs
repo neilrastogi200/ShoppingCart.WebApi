@@ -38,7 +38,7 @@ namespace ShoppingCart.Repository.Repository
             return _products.Find(p => p.Name == name && p.Quantity == quantity);
         }
 
-        public Product Add(Product item)
+        public void Add(Product item)
         {
             if (item == null)
             {
@@ -47,7 +47,6 @@ namespace ShoppingCart.Repository.Repository
 
             item.ProductId = _nextId++;
             _products.Add(item);
-            return item;
         }
 
         public void Remove(int id)
